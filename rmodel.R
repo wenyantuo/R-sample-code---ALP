@@ -38,24 +38,17 @@ table(train.rose0.1$purchase)
 table(train.rose0.15$purchase)
 table(train.rose0.4$purchase)
 
-#write these datasets
-#write.csv(train.rose11,"C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.rose11.csv")
-#write.csv(train.rose0.1,"C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.rose0.1.csv")
-#write.csv(train.rose0.2,"C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.rose0.2.csv")
-#write.csv(train.rose0.15,"C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.rose0.15.csv")
-#write.csv(train.rose0.4,"C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.rose0.4.csv")
-#write.csv(train.test,"C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.test0.2.csv")
-#write.csv(train.cust,"C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.cust.csv")
+
 
 #load h2o
 h2o.init(nthreads = -1,max_mem_size = "8G")
-train.train <- h2o.importFile("C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.train.csv")
-train.rose11 <- h2o.importFile("C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.rose11.csv")
-train.rose0.1 <- h2o.importFile("C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.rose0.1.csv")
-train.rose0.15 <- h2o.importFile("C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.rose0.15.csv")
-train.rose0.2 <- h2o.importFile("C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.rose0.2.csv")
-train.rose0.4 <- h2o.importFile("C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.rose0.4.csv")
-data.test <- h2o.importFile("C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.test0.2.csv")
+train.train <- h2o.importFile("C:/Users/Desktop/UMD/Action Learning/train.train.csv")
+train.rose11 <- h2o.importFile("C:/Users/Desktop/UMD/Action Learning/train.rose11.csv")
+train.rose0.1 <- h2o.importFile("C:/Users/Desktop/UMD/Action Learning/train.rose0.1.csv")
+train.rose0.15 <- h2o.importFile("C:/Users/Desktop/UMD/Action Learning/train.rose0.15.csv")
+train.rose0.2 <- h2o.importFile("C:/Users/Desktop/UMD/Action Learning/train.rose0.2.csv")
+train.rose0.4 <- h2o.importFile("C:/Users/Desktop/UMD/Action Learning/train.rose0.4.csv")
+data.test <- h2o.importFile("C:/Users/Desktop/UMD/Action Learning/train.test0.2.csv")
 
 data.lm.train <- train.train[train.train$transactionRevenue>0,]
 data.lm.test <- data.test[data.test$transactionRevenue>0,]
