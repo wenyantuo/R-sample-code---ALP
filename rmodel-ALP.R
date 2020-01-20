@@ -17,7 +17,7 @@ library(flexmix)
 library(Matrix)
 
 #read the original csv dataset
-train.cust <- read.csv("Customer4ethan.csv")
+train.cust <- read.csv("Customer.csv")
 train.cust$purchase <- ifelse(train.cust$purchase>0,1,0)
 
 #split the train dataset into train and test
@@ -37,14 +37,7 @@ table(train.rose0.1$purchase)
 table(train.rose0.15$purchase)
 table(train.rose0.4$purchase)
 
-#write these datasets
-#write.csv(train.rose11,"C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.rose11.csv")
-#write.csv(train.rose0.1,"C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.rose0.1.csv")
-#write.csv(train.rose0.2,"C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.rose0.2.csv")
-#write.csv(train.rose0.15,"C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.rose0.15.csv")
-#write.csv(train.rose0.4,"C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.rose0.4.csv")
-#write.csv(train.test,"C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.test0.2.csv")
-#write.csv(train.cust,"C:/Users/Chen Yushuang/Desktop/UMD/Action Learning/train.cust.csv")
+
 
 #load h2o
 h2o.init(nthreads = -1,max_mem_size = "8G")
